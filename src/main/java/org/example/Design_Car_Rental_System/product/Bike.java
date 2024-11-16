@@ -1,6 +1,6 @@
 package org.example.Design_Car_Rental_System.product;
 
-import org.example.Design_ParkingSpot.models.VehicleType;
+import org.example.Design_Car_Rental_System.product.VehicleType;
 
 import java.util.Date;
 

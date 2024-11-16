@@ -2,8 +2,7 @@ package org.example.Design_Car_Rental_System;
 
 
 import org.example.Design_Car_Rental_System.product.Vehicle;
-import org.example.Design_ParkingSpot.models.VehicleType;
-
+import org.example.Design_Car_Rental_System.product.VehicleType;
 import java.util.ArrayList;
 import java.util.List;
 

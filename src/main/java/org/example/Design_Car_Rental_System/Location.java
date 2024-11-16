@@ -7,7 +7,7 @@ public class Location {
     String state;
     String country;
 
-    public Location(String address, int pincode, String city, String state, String country) {
+    public Location(int pincode, String city, String state, String country) {
         this.address = address;
         this.pincode = pincode;
         this.city = city;
