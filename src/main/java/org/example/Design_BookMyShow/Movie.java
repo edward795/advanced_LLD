@@ -11,6 +11,10 @@ public class Movie {
         this.movieDurationInMinutes = movieDurationInMinutes;
     }
 
+    public Movie() {
+
+    }
+
     public int getMovieId() {
         return movieId;
     }
