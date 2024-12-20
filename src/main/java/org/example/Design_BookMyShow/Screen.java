@@ -12,6 +12,9 @@ public class Screen {
         this.seats = seats;
     }
 
+    public Screen() {
+    }
+
     public int getScreenId() {
         return screenId;
     }
