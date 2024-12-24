@@ -1,6 +1,10 @@
 package org.example.Design_ATM.ATMStates;
 
 import org.example.Design_ATM.ATM;
+import org.example.Design_ATM.AmountWithDrawal.CashWithdrawProcessor;
+import org.example.Design_ATM.AmountWithDrawal.FiveHundredWithdrawProcessor;
+import org.example.Design_ATM.AmountWithDrawal.OneHundredWithdrawProcessor;
+import org.example.Design_ATM.AmountWithDrawal.TwoThousandWithdrawProcessor;
 import org.example.Design_ATM.Card;
 
 public class CashWithDrawalState extends ATMState{
@@ -20,6 +24,10 @@ public class CashWithDrawalState extends ATMState{
             card.deductBankBalance(withdrawAmount);
             atm.deductATMBalance(withdrawAmount);
             //using chain of responsibility design pattern for 2000 rupees,500 rupees notes
+            CashWithdrawProcessor withdrawProcessor=new TwoThousandWithdrawProcessor(new FiveHundredWithdrawProcessor(
+                    new OneHundredWithdrawProcessor(null)
+            ));
+            withdrawProcessor.withdraw(atm,withdrawAmount);
             exit(atm);
         }
     }
