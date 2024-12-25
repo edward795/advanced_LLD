@@ -1,10 +1,9 @@
-package org.example.composite_design_pattern;
+package org.example.composite_design_pattern.ProblemStatement;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Directory {
+public class Directory implements FileSystem{
     String directoryName;
     List<Object> objectList;
 

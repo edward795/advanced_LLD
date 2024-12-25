@@ -1,4 +1,4 @@
-package org.example.composite_design_pattern;
+package org.example.composite_design_pattern.ProblemStatement;
 
 public class Main {
     public static void main(String[] args) {
