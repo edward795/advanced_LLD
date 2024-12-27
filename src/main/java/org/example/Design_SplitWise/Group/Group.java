@@ -68,7 +68,12 @@ public class Group {
 
     public Expense createExpense(String expenseId, String description, double expenseAmount,
                                  List<Split> splitDetails, ExpenseSplitType splitType, User paidByUser){
-        Expense expense=expenseController.createExpense();
+        Expense expense=expenseController.createExpense(expenseId,
+                description,
+                expenseAmount,
+                splitDetails,
+                splitType,
+                paidByUser);
         expenseList.add(expense);
         return expense;
     }
