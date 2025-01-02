@@ -63,4 +63,58 @@ public class Team {
         this.bowlingController = bowlingController;
     }
 
+    public void chooseNextBatsMan() throws Exception {
+        battingController.getNextPlayer();
+    }
+
+    public void chooseNextBowler(int maxOverCountPerBowler) {
+        bowlingController.getNextBowler(maxOverCountPerBowler);
+    }
+
+    public PlayerDetails getStriker() {
+        return battingController.getStriker();
+    }
+
+    public PlayerDetails getNonStriker() {
+        return battingController.getNonStriker();
+    }
+
+    public void setStriker(PlayerDetails player) {
+        battingController.setStriker(player);
+    }
+
+    public void setNonStriker(PlayerDetails player) {
+        battingController.setNonStriker(player);
+    }
+
+    public PlayerDetails getCurrentBowler() {
+        return bowlingController.getCurrentBowler();
+    }
+
+    public void printBattingScoreCard() {
+
+        for (PlayerDetails playerDetails : playing11) {
+            playerDetails.printBattingScoreCard();
+        }
+    }
+
+    public void printBowlingScoreCard() {
+
+        for (PlayerDetails playerDetails : playing11) {
+            if (playerDetails.bowlingScoreCard.totalOversCount > 0) {
+                playerDetails.printBowlingScoreCard();
+            }
+        }
+    }
+
+    public int getTotalRuns() {
+        int totalRun = 0;
+        for (PlayerDetails player : playing11) {
+
+            totalRun += player.battingScoreCard.totalRuns;
+        }
+        return totalRun;
+
+
+    }
 }
